@@ -7,7 +7,7 @@
 
 body {
         background-color: #000000;
-        background-image:url("<?php echo base_url('image/first_img.jpg'); ?>");
+        background-image:url("<?php echo base_url('image/first_img.JPG'); ?>");
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

@@ -162,8 +162,8 @@ if(isset($_REQUEST['active'])) $active = $_REQUEST['active'];
                                 <i class="fa fa-book"></i> <span>Call History</span>
                             </a>
                         </li>
-                        <li class="<?php if($active == 'cel') echo 'active';?>">
-                            <a href="<?php echo base_url('index.php/cel?active=cel'); ?>">
+                        <li class="<?php if($active == 'channel') echo 'active';?>">
+                            <a href="<?php echo base_url('index.php/channel?active=channel'); ?>">
                                 <i class="fa fa-phone"></i> <span>Channel History</span>
                             </a>
                         </li>

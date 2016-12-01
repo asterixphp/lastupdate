@@ -19,7 +19,7 @@ class channel extends BASE_Controller
     {
        date_default_timezone_set('America/Los_Angeles');
       if( !isset($_REQUEST['st_date']) )
-            $_REQUEST['st_date'] = date("m/1/Y");
+            $_REQUEST['st_date'] = date("m/d/Y");
 
       if( !isset($_REQUEST['en_date']) )
            $_REQUEST['en_date'] = date("m/d/Y");
