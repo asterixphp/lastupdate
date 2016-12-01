@@ -8,10 +8,12 @@ class Cdr_db extends CI_Model {
         parent::__construct();
     }
 
-    function get_list() // not including resigned and suspended user
+    function get_list($sdate , $edate) // not including resigned and suspended user
     {
         $admin_db= $this->load->database('asteriskcdrdb', TRUE);
-        $query = $this->db->get('cdr');
+        $whr = " between '".$sdate."' and '".$edate."'" ;
+        $query = $this->db->query("select * from cdr where calldate $whr");
+      //  $query = $this->db->get('cdr');
         return $query->result_array();
     }
 

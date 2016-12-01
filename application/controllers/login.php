@@ -39,7 +39,7 @@ class Login extends CI_Controller
     	$userdata = $this->user_db->get_user_by_user_name($username);
 
     	if(count($userdata) > 0){
-    	      if($userdata[0]['password'] == $password) {
+    	      if($userdata[0]['password'] == md5($password)) {
                 $this->set_session($userdata);
                 $this->dirctdisplay($_SESSION['user_id']);
 

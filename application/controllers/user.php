@@ -19,11 +19,20 @@ class user extends BASE_Controller
 
     public function index()
     {
-        $userList   = $this->user_db->get_all_users(); // all user ,
+        $omList   = $this->user_db->get_all_users(); // all user ,
         //print_r($orderList);
-        $B = $this->load->view('user', array('uList' => $userList), TRUE );
+        $B = $this->load->view('user', array('omList' => $omList), TRUE );
 
         $this->_O( $B );
+    }
+
+    public function user_upload()
+    {
+        $username = $_REQUEST['selname'];
+       if($_REQUEST['user_type'] == 0) $this->user_db->delete_users($username); 
+       if($_REQUEST['user_type'] == 1) $this->user_db->block_users($username); 
+       if($_REQUEST['user_type'] == 2) $this->user_db->allow_users($username); 
+        $this->index();
     }
 
     public function loglist()

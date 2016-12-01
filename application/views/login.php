@@ -7,7 +7,7 @@
 
 body {
         background-color: #000000;
-        background-image:url("<?php echo base_url('image/first_img.JPG'); ?>");
+        background-image:url("<?php echo base_url('image/first_img.jpg'); ?>");
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -356,7 +356,7 @@ td {
 	</head>
 	<body>
 		<div class="cardtop">
-          <img src="<?php echo base_url('image/login_form.JPG'); ?>" />
+          <img src="<?php echo base_url('image/login_form.jpg'); ?>" />
         </div>
 		 <div class="card card-container">
               <?php $attributes = array('class' => 'form-signin', 'id' => 'reg_form', 'name' => 'reg_form' , 'method'=>'post', 'role' => 'form');

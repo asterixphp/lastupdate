@@ -22,9 +22,9 @@ class exten extends BASE_Controller
 
     public function index()
     {
-        $userList   = $this->exten_db->get_all_users(); // all user ,
+        $omList   = $this->exten_db->get_all_users(); // all user ,
         //print_r($orderList);
-        $B = $this->load->view('exten', array('uList' => $userList), TRUE );
+        $B = $this->load->view('exten', array('omList' => $omList), TRUE );
 
         $this->_O( $B );
     }

@@ -7,7 +7,7 @@ if(isset($_REQUEST['active'])) $active = $_REQUEST['active'];
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Delivery System | <?php echo $page_header; ?></title>
+        <title>Phone Plus | <?php echo $page_header; ?></title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -157,14 +157,14 @@ if(isset($_REQUEST['active'])) $active = $_REQUEST['active'];
                                 <i class="fa fa-cog"></i> <span>Extension</span>
                             </a>
                         </li>
-                        <li class="<?php if($active == 'register') echo 'active';?>">
-                            <a href="<?php echo base_url('index.php/register_table?active=exten'); ?>">
-                                <i class="fa fa-cog"></i> <span>Call History</span>
+                        <li class="<?php if($active == 'cdr') echo 'active';?>">
+                            <a href="<?php echo base_url('index.php/cdr?active=cdr'); ?>">
+                                <i class="fa fa-book"></i> <span>Call History</span>
                             </a>
                         </li>
-                        <li class="<?php if($active == 'exten') echo 'active';?>">
-                            <a href="<?php echo base_url('index.php/register_table?active=exten'); ?>">
-                                <i class="fa fa-cog"></i> <span>Channel History</span>
+                        <li class="<?php if($active == 'cel') echo 'active';?>">
+                            <a href="<?php echo base_url('index.php/cel?active=cel'); ?>">
+                                <i class="fa fa-phone"></i> <span>Channel History</span>
                             </a>
                         </li>
 
