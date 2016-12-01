@@ -22,7 +22,7 @@ $field_type = array( 'eventtype','eventtime','cid_num','cid_ani','cid_dnid','ext
 
     <!-- Main content -->
     <?php $attributes = array('class' => '', 'id' => 'reg_form', 'name' =>'reg_form', 'method'=>'post', 'role' => 'form');
-              echo form_open_multipart('index.php/cel', $attributes); ?>
+              echo form_open_multipart('index.php/channel', $attributes); ?>
     <section class="content">
       <div class="row">
         <div class="col-xs-12">

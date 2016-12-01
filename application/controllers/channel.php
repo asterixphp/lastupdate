@@ -2,7 +2,7 @@
 
 require_once('base_controller.php');
 
-class cel extends BASE_Controller
+class channel extends BASE_Controller
 {
     var $menuList;
     public function __construct()
@@ -17,7 +17,7 @@ class cel extends BASE_Controller
     }
     public function index()
     {
-       date_default_timezone_get();
+       date_default_timezone_set('America/Los_Angeles');
       if( !isset($_REQUEST['st_date']) )
             $_REQUEST['st_date'] = date("m/1/Y");
 
@@ -28,7 +28,7 @@ class cel extends BASE_Controller
       $en_calc = date("Y-m-d", strtotime($_REQUEST['en_date']));
 
         $omList   = $this->cel_db->get_list($st_calc  , $en_calc ); // all user ,
-        $B = $this->load->view('cel', array('omList' => $omList , 'st_date'=>$_REQUEST['st_date'] , 'en_date'=>$_REQUEST['en_date']), TRUE );
+        $B = $this->load->view('channel', array('omList' => $omList , 'st_date'=>$_REQUEST['st_date'] , 'en_date'=>$_REQUEST['en_date']), TRUE );
         $this->_O( $B );
     }
 }
