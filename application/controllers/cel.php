@@ -8,12 +8,16 @@ class cel extends BASE_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->helper(array('form','url'));
+        $this->load->library(array( 'form_validation', 'email'));
+        $this->load->library ( 'upload' );
         $this->load->database();
         $this->load->model('cel_db');
 
     }
     public function index()
     {
+       date_default_timezone_get();
       if( !isset($_REQUEST['st_date']) )
             $_REQUEST['st_date'] = date("m/1/Y");
 

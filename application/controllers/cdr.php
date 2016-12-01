@@ -19,6 +19,7 @@ class cdr extends BASE_Controller
 
     public function index()
     {
+       date_default_timezone_get();
       if( !isset($_REQUEST['st_date']) )
             $_REQUEST['st_date'] = date("m/1/Y");
 
